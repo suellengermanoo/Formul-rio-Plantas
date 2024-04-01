@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">   
+        </script>
+        <script>
+            function salvar() {
+                let form = document.getElementById("form-cadastro")
+                let nome = form.nome.value
+                let especie = form.especie.value
+    
+                if (nome.trim() == "") {
+                    alert("Preencha o NOME DA PLANTA")
+                    return false
+                }
+    
+                if (especie.trim() == "") {
+                    alert("Preencha a ESPÉCIE")
+                    return false
+                }
+    
+                alert("Planta cadastrada com sucesso!")
+                return true
+            }
+        </script>
+        <title>SuaPlanta.com</title>
+    </head>
+    
+    <body>
+        <div class="container">
+            <h1 class="titulo">Sua Planta.com</h1> 
+            <form id="form-cadastro" class="formulario" onsubmit="return false">
+                <div class="linha">
+                    <label for="nome">Nome da Planta:</label>
+                    <input type="text" name="nome" maxlength="40" autocomplete="off">
+                </div>
+    
+                <div class="linha">
+                    <label for="especie">Espécie:</label>
+                    <input type="text" name="especie" maxlength="80">
+                </div>
+    
+                <div class="linha">
+                    <label for="altura">Altura Máxima:</label>
+                    <input type="number" name="altura" min="0">
+                </div>
+    
+                <div class="linha">
+                    <input type="submit" name="enviar" value="Cadastro" onclick="salvar()">
+                </div>
+            </form>
+        </div>
+    </body>
+    
+    </html>
